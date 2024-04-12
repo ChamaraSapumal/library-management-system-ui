@@ -28,12 +28,12 @@
               "src/styles.css",
               "bootstrap/dist/css/bootstrap.min.css",
               "bootstrap-icons/font/bootstrap-icons.min.css",
-              "aos/dist/aos.css",
-              "sweetalert2/dist/sweetalert2.min.css"
+              "sweetalert2/dist/sweetalert2.min.css",
+              "node_modules/aos/dist/aos.css"
             ],
             "scripts": [
               "bootstrap/dist/js/bootstrap.bundle.min.js",
-              "aos/dist/aos.js",
+              "node_modules/aos/dist/aos.js",
               "sweetalert2/dist/sweetalert2.all.min.js"
             ]
           },
