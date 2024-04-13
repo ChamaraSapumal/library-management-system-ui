@@ -3,12 +3,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [RouterLink, HttpClientModule, FormsModule, CommonModule],
+  imports: [RouterLink, HttpClientModule, FormsModule, CommonModule, NgxTypedJsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -25,7 +26,7 @@ export class LoginComponent {
         this.loginObj = {};
 
         if (data == true) {
-          this.router.navigate(['/all-books']);
+          this.router.navigate(['/home']);
         } else {
           Swal.fire({
             icon: "error",
@@ -37,4 +38,6 @@ export class LoginComponent {
         }
       })
   }
+
+
 }

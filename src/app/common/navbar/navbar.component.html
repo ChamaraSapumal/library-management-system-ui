@@ -10,10 +10,15 @@
         </div>
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+            <li (click)="setSelectedMenu('home')"><a href="#" class="nav-link px-2"
+                    [ngClass]="{'link-secondary' : selectedMenu == 'home'}" [routerLink]="['/home']">Home</a></li>
             <li><a href="#" class="nav-link px-2">Features</a></li>
-            <li><a href="#" class="nav-link px-2" [routerLink]="['/all-books']">View all books</a></li>
-            <li><a href="#" class="nav-link px-2" [routerLink]="['/all-users']">View all users</a></li>
+            <li (click)="setSelectedMenu('allBook')"><a href="#" class="nav-link px-2"
+                    [ngClass]="{'link-secondary' : selectedMenu == 'allBook'}" [routerLink]="['/all-books']">View all
+                    books</a></li>
+            <li (click)="setSelectedMenu('allUser')"><a href="#" class="nav-link px-2"
+                    [ngClass]="{'link-secondary' : selectedMenu == 'allUser'}" [routerLink]="['/all-users']">View all
+                    users</a></li>
             <li><a href="#" class="nav-link px-2">About</a></li>
         </ul>
 
