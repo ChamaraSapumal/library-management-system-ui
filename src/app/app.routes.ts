@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './page/login/login.component';
 import { AllBooksComponent } from './page/all-books/all-books.component';
 import { RegisterComponent } from './page/register/register.component';
+import { AllReadersComponent } from './page/all-readers/all-readers.component';
+import { HomeComponent } from './page/home/home.component';
 
 export const routes: Routes = [
     {
@@ -9,11 +11,19 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
+        path: "signup",
+        component: RegisterComponent
+    },
+    {
         path: "all-books",
         component: AllBooksComponent
     },
     {
-        path: "signup",
-        component: RegisterComponent
+        path: "all-users",
+        component: AllReadersComponent
+    },
+    {
+        path: "",
+        component: HomeComponent
     }
 ];

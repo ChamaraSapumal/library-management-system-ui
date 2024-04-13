@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import Swal from 'sweetalert2';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -29,7 +30,7 @@ export class RegisterComponent implements OnInit {
   }
   public isExistsUser: any;
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient, public router: Router) {
     this.http = httpClient;
   }
 
@@ -76,6 +77,7 @@ export class RegisterComponent implements OnInit {
             showConfirmButton: false,
             timer: 2000
           });
+          this.router.navigate(['/login']);
         })
     } else {
       Swal.fire({
