@@ -15,7 +15,6 @@ import Swal from 'sweetalert2';
 export class AddBookComponent {
 
   constructor(private http: HttpClient) {
-
   }
 
   public bookObj: any = {
@@ -24,6 +23,24 @@ export class AddBookComponent {
     authorName: "",
     category: "",
     qty: ""
+  }
+
+  public selectedItems: any = 0;
+
+  public isCheckedIsbn: boolean = false;
+  public isCheckedTitle: boolean = false;
+  public isCheckedAuthor: boolean = false;
+  public isCheckedCategory: boolean = false;
+  public isCheckedQty: boolean = false;
+  public isVerified: boolean = false;
+
+  checkSelectedItems() {
+    this.selectedItems =
+      (this.isCheckedIsbn ? 1 : 0) +
+      (this.isCheckedTitle ? 1 : 0) +
+      (this.isCheckedAuthor ? 1 : 0) +
+      (this.isCheckedCategory ? 1 : 0) +
+      (this.isCheckedQty ? 1 : 0)
   }
 
   addBook() {
@@ -39,4 +56,14 @@ export class AddBookComponent {
         });
       })
   }
+
+  verifyInformation() {
+    this.isVerified = true;
+  }
+
+
+  registerButtonDisable(): boolean {
+    return !this.isVerified || this.selectedItems !== 5;
+  }
+
 }
