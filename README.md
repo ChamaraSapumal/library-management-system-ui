@@ -1,27 +1,92 @@
-# LibMgmtAppV2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+# Angular Library Management System
 
-## Development server
+The **Angular Library Management System** is a web application designed to streamline library operations, manage books, and enhance user experience. Below, I'll provide detailed information about each feature:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+1. **Home Page**:
+   - Provides an overview of the library system.
+   - Users can navigate to different sections from here.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **View All Books**:
+   - Displays a table with book details:
+     - **ID**: Unique identifier for each book.
+     - **ISBN**: International Standard Book Number.
+     - **Title**: Title of the book.
+     - **Author**: Author(s) of the book.
+     - **Category**: Categorization of the book (e.g., Fiction, Non-Fiction, Science, etc.).
+     - **Quantity**: Number of available copies.
+   - Users can:
+     - View book details.
+     - Edit book information.
+     - Delete books from the system.
 
-## Build
+3. **View All Users**:
+   - Displays a table with user details:
+     - **ID**: Unique identifier for each user.
+     - **Username**: User's login name.
+     - **Full Name**: User's complete name.
+     - **Address**: User's address.
+     - **Address (Optional)**: Additional address details (optional).
+     - **Country**: User's country.
+     - **Email**: User's email address.
+     - **Contact Number**: User's phone number.
+   - Users can:
+     - View user profiles.
+     - Edit user information.
+     - Delete user profiles.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4. **View All Authors**:
+   - Provides information about authors associated with the library.
+   - Users can explore details such as author names, biographies, and other relevant information.
 
-## Running unit tests
+5. **Sign In**:
+   - Existing users can sign in using their credentials.
+   - Authentication ensures secure access to user-specific features.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+6. **Sign Up**:
+   - New users can create an account by providing necessary information.
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Installation**:
+   - Clone this repository to your local machine.
+   - Run `npm install` to install the necessary dependencies.
 
-## Further help
+2. **Development Server**:
+   - Run `ng serve` for a dev server.
+   - Navigate to `http://localhost:4200/` in your browser.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. **Authentication**:
+   - The system includes sign-in and sign-up functionality for user access.
+
+## Usage
+
+1. **Home Page**:
+   - Provides an overview of the library system.
+
+2. **View All Books**:
+   - Explore the complete list of books available in the library.
+   - Edit or delete books as needed.
+
+3. **View All Users**:
+   - Access information about library users.
+   - Edit or delete user profiles.
+
+4. **View All Authors**:
+   - Discover details about authors associated with the library.
+
+5. **Sign In**:
+   - Existing users can sign in using their credentials.
+
+6. **Sign Up**:
+   - New users can create an account by providing necessary information.
+
+## Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues.
+
+## License
+
+This project is licensed under the MIT License.
